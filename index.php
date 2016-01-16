@@ -77,16 +77,16 @@
 			<div>
 
 			    <?php
-                    /*$Context=array("header"=>"User-Agent:Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:43.0) Gecko/20100101 Firefox/43.0"
-);*/
-$opts = array(
+                    $opts=array("header"=>"User-Agent:Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:43.0) Gecko/20100101 Firefox/43.0"
+);
+/*$opts = array(
     		'http'=>array(
     			'method'=>"GET",
     			'header'=>"Accept-language: en\r\n" .
     			"User-Agent: 	Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6\r\n".
     			"Cookie: foo=bar\r\n"
     		)
-    	);
+    	); */
 				    $cxt=stream_context_create($opts);
 				    $coder1=$_POST['coder1'];
 				    $url1="http://www.spoj.com/users/$coder1/";
