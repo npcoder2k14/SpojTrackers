@@ -62,7 +62,7 @@
 
 			<?php
                 include('simple_html_dom.php');
-                include('proxy.php');
+              //  include('proxy.php');
                 function getStringBetween($str,$from,$to)
                {
                   $sub = substr($str, strpos($str,$from)+strlen($from),strlen($str));
@@ -72,14 +72,6 @@
               if(isset($_POST['coder1']) && isset($_POST['coder2'])) {
 
 
-
-    		/*	$auth=base64_encode('edcguest:edcguest');
-    			$Context=array('http'=>array(
-	        			'proxy'=>'tcp://172.31.102.14:3128',
-	        			'request_fulluri'=>true,
-	        			'header'=>"Proxy-Authorization:Basic $auth"
-   					)
-   				);   */
 			?>
 
 			<div>
@@ -89,7 +81,7 @@
 				//    $cxt=stream_context_create($Context);
 				    $coder1=$_POST['coder1'];
 				    $url1="http://www.spoj.com/users/$coder1/";
-				    $html1 = file_get_html($url1,false,$cxt);
+				    $html1 = file_get_html($url1);
 				    $userprofile1=$html1->find('div[id=user-profile-left]',0);
 				    $name1=$userprofile1->find('h3',0);
 				    $username1=$userprofile1->find('h4',0);
@@ -116,7 +108,7 @@
 				//    $cxt=stream_context_create($Context);
 				    $coder2=$_POST['coder2'];
 				    $url2="http://www.spoj.com/users/$coder2/";
-				    $html2 = file_get_html($url2,false,$cxt);
+				    $html2 = file_get_html($url2);
 				    $userprofile2=$html2->find('div[id=user-profile-left]',0);
 				    $name2=$userprofile2->find('h3',0);
 				    $username2=$userprofile2->find('h4',0);
