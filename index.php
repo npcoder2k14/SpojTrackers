@@ -77,11 +77,12 @@
 			<div>
 
 			    <?php
-
-				//    $cxt=stream_context_create($Context);
+                    $Context=array("header"=>"User-Agent:Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:43.0) Gecko/20100101 Firefox/43.0"
+);
+				    $cxt=stream_context_create($Context);
 				    $coder1=$_POST['coder1'];
 				    $url1="http://www.spoj.com/users/$coder1/";
-				    $html1 = file_get_html($url1);
+				    $html1 = file_get_html($url1,$cxt,false);
 				    $userprofile1=$html1->find('div[id=user-profile-left]',0);
 				    $name1=$userprofile1->find('h3',0);
 				    $username1=$userprofile1->find('h4',0);
@@ -108,7 +109,7 @@
 				//    $cxt=stream_context_create($Context);
 				    $coder2=$_POST['coder2'];
 				    $url2="http://www.spoj.com/users/$coder2/";
-				    $html2 = file_get_html($url2);
+				    $html2 = file_get_html($url2,$cxt,false);
 				    $userprofile2=$html2->find('div[id=user-profile-left]',0);
 				    $name2=$userprofile2->find('h3',0);
 				    $username2=$userprofile2->find('h4',0);
