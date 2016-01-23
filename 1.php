@@ -17,6 +17,6 @@ curl_close($ch);
 $str = gzinflate(substr($str, 10, -8));
 $html1= str_get_html($str);
 //echo $str;
-echo sizeof($html1);
+print_r($html1);
 echo  "hi fuck dasjhgjg";
  ?>
