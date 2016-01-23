@@ -94,6 +94,8 @@
 				  //  $html1 = file_get_html($url1,false,$cxt);
 					  $ch=curl_init();
 						curl_setopt($ch, CURLOPT_URL,$url1);
+						curl_setopt ($ch, CURLOPT_HEADER, true);
+						curl_setopt ($ch, CURLOPT_USERAGENT, $_SERVER["HTTP_USER_AGENT"]);
 						curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
             curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 20);
 						curl_setopt($ch,CURLOPT_PROXY,$proxy);
@@ -130,6 +132,8 @@
 				    $url2="http://www.spoj.com/users/$coder2/";
 						$ch=curl_init();
 						curl_setopt($ch, CURLOPT_URL,$url2);
+						curl_setopt ($ch, CURLOPT_HEADER, true);
+						curl_setopt ($ch, CURLOPT_USERAGENT, $_SERVER["HTTP_USER_AGENT"]);
 						curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
             curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 20);
 						curl_setopt($ch,CURLOPT_PROXY,$proxy);
