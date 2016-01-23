@@ -1,4 +1,5 @@
 <?php
+ob_start("ob_gzhandler");
 include('simple_html_dom.php');
 $url = 'http://www.whatsmyip.org/http_compression/';
 $ch = curl_init();
