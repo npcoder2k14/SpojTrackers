@@ -16,7 +16,7 @@ $str = curl_exec($ch);
 curl_close($ch);
 echo  "hi fuck";
 $html1= str_get_html($str);
-//echo $str;
-print_r($html1);
+echo $str;
+//print_r($html1);
 echo  "hi fuck dasjhgjg";
  ?>
