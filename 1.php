@@ -15,7 +15,7 @@ curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 20);
 $str = curl_exec($ch);
 curl_close($ch);
 echo  "hi fuck";
-//$html1= str_get_html($str);
+$html1= str_get_html($str);
 //echo $str;
 echo sizeof($html1);
 echo  "hi fuck dasjhgjg";
