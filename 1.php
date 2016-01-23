@@ -14,7 +14,7 @@ curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 20);
 //curl_setopt($ch,CURLOPT_PROXYUSERPWD,$proxyauth);
 $str = curl_exec($ch);
 curl_close($ch);
-echo  "hi fuck";
+$str = gzinflate(substr($str, 10, -8));
 $html1= str_get_html($str);
 //echo $str;
 echo sizeof($html1);
