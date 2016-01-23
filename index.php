@@ -62,7 +62,7 @@
 
 			<?php
                 include('simple_html_dom.php');
-               include('proxy.php');
+              // include('proxy.php');
                 function getStringBetween($str,$from,$to)
                {
                   $sub = substr($str, strpos($str,$from)+strlen($from),strlen($str));
