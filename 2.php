@@ -13,7 +13,7 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE); // Follow redirects
 $return = curl_exec($ch); 
 $info = curl_getinfo($ch); 
 curl_close($ch); 
-
+echo $info;
 $html = str_get_html("$return");
 print_r($html);
 ?>
